@@ -7,11 +7,13 @@ export default defineConfig({
   root: path.resolve(__dirname, "client"),
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
-    emptyOutDir: true
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "client/src")
-    }
-  }
+      "@": path.resolve(__dirname, "client/src"),
+      "@shared": path.resolve(__dirname, "shared"),
+    },
+  },
 });
+
