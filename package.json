@@ -9,6 +9,8 @@
     "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "drizzle-orm": "^0.39.1",
     "express": "^4.21.2",
     "nanoid": "^5.1.6"
   },
