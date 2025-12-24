@@ -1,8 +1,8 @@
 import {
   type ContactSubmission,
   type InsertContactSubmission,
-  contactSubmissions
-} from "../schema";
+  contactSubmissions,
+} from "../shared/schema";
 
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
@@ -15,22 +15,16 @@ const sql = neon(process.env.DATABASE_URL);
 const db = drizzle(sql);
 
 export interface IStorage {
-  createContactSubmission(
-    submission: InsertContactSubmission
-  ): Promise<ContactSubmission>;
-
+  createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission>;
   getContactSubmissions(): Promise<ContactSubmission[]>;
 }
 
 export class PostgresStorage implements IStorage {
-  async createContactSubmission(
-    insertSubmission: InsertContactSubmission
-  ): Promise<ContactSubmission> {
+  async createContactSubmission(insertSubmission: InsertContactSubmission): Promise<ContactSubmission> {
     const [submission] = await db
       .insert(contactSubmissions)
       .values(insertSubmission)
       .returning();
-
     return submission;
   }
 
