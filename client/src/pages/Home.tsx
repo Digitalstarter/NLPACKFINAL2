@@ -145,7 +145,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="inline-block mb-4 md:mb-6"
             >
-              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg">
+              <div className="bg-gradient-to-r from-red-500 via-white to-blue-500 text-blue-900 px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg shadow-lg border border-blue-200">
                 ✓ 10+ Jaar Ervaring in Verpakkingen
               </div>
             </motion.div>
@@ -166,10 +166,10 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="border hover:shadow-lg transition-all duration-300 hover-elevate bg-gradient-to-br from-sky-50 to-blue-50 hover:from-blue-100 hover:to-cyan-100" data-testid={`card-usp-${index}`}>
+                <Card className="border hover:shadow-lg transition-all duration-300 hover-elevate bg-gradient-to-br from-sky-50 to-blue-50 hover:from-blue-100 hover:to-cyan-100 border-l-4 border-l-red-500" data-testid={`card-usp-${index}`}>
                   <CardContent className="p-4 md:p-6">
-                    <div className="mb-3 md:mb-4 inline-flex p-2 md:p-3 rounded-lg bg-primary/10">
-                      <item.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                    <div className="mb-3 md:mb-4 inline-flex p-2 md:p-3 rounded-lg bg-red-50">
+                      <item.icon className="h-5 w-5 md:h-6 md:w-6 text-red-600" />
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -282,7 +282,7 @@ export default function Home() {
                         transition={{ duration: 0.4, delay: bIndex * 0.1 }}
                         viewport={{ once: true }}
                       >
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" />
                         <span className="text-base">{benefit}</span>
                       </motion.li>
                     ))}

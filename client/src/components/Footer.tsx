@@ -5,7 +5,7 @@ import logoImg from "../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-blue-200 bg-gradient-to-b from-sky-50 to-blue-50 mt-auto">
+    <footer className="border-t-4 border-t-red-500 bg-gradient-to-b from-sky-50 to-blue-50 mt-auto">
       <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <motion.div 
@@ -73,15 +73,15 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm text-blue-700 hover:text-blue-900 transition-colors"
                 data-testid="link-footer-email"
               >
-                <Mail className="h-4 w-4 flex-shrink-0" />
+                <Mail className="h-4 w-4 flex-shrink-0 text-red-500" />
                 info@nlpack.nl
               </a>
               <div className="flex items-center gap-2 text-sm text-blue-700" data-testid="text-footer-phone">
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                <Phone className="h-4 w-4 flex-shrink-0 text-red-500" />
                 +31 6 39 19 08 34
               </div>
               <div className="flex items-start gap-2 text-sm text-blue-700" data-testid="text-footer-address">
-                <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5 text-red-500" />
                 <span>Rotterdam, Nederland</span>
               </div>
             </div>
