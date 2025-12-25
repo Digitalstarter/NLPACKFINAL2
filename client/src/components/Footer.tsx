@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import logoImg from "../assets/logo.png";
 
 export default function Footer() {
   return (
@@ -14,6 +15,13 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
+            <Link href="/">
+              <img 
+                src={logoImg} 
+                alt="NL Pack Logo" 
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="text-sm text-blue-800/80 leading-relaxed">
               Uw betrouwbare partner voor hoogwaardige verpakkingsmaterialen. 
               Specialist in golfkarton, dozen en maatwerk oplossingen.
